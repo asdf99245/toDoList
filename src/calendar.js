@@ -47,7 +47,8 @@ function getCalendar(year, month) {
       const td = document.createElement('td');
       if ((i === 0 && j >= day) || (i !== 0 && cnt <= getDays(year, month + 1))) {
         td.innerHTML = cnt;
-        if (year === TODAY.getFullYear() && month === TODAY.getMonth() && cnt === TODAY.getDay()) {
+        if (year === TODAY.getFullYear() && month === TODAY.getMonth() && cnt === TODAY.getDate()) {
+          //console.log(year, month, cnt);
           td.classList.add('today');
         }
         td.setAttribute('id', cnt);
